@@ -221,7 +221,7 @@ submit.addEventListener("click", (e) => {
 
 // 18
 const dropArea = document.querySelector(".drop-area");
-const dgDpBtpn = document.querySelector("#drap-drop-btn");
+const dgDpBtpn = document.querySelector("#drag-drop-btn");
 const dgDpInput = document.querySelector("#drag-drop");
 const dpText = document.querySelector("#dp-text");
 const dpMessage = document.querySelector("#dp-message");

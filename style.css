@@ -244,12 +244,12 @@ img {
 }
 #submit-go {
   padding: 0.5rem 1rem;
-  margin: 0 auto;
 }
 
 .drop-area {
+  text-align: center;
   height: 300px;
-  width: 400px;
+
   background-color: bisque;
   display: flex;
   flex-direction: column;
@@ -263,7 +263,9 @@ img {
 .highlight {
   background-color: green;
 }
-
+#drag-drop-btn {
+  margin-right: 1rem;
+}
 #dp-text {
   margin-bottom: 4rem;
   text-align: center;
