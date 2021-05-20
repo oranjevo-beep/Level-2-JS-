@@ -67,6 +67,7 @@ h2 {
   border: none;
   color: rgba(255, 255, 255, 0.671);
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .delete {
@@ -84,7 +85,7 @@ h2 {
   max-width: 20rem;
 }
 #inp-3 {
-  max-width: 100%;
+  max-width: 20rem;
 }
 .input-container {
   margin-top: 2rem;
@@ -193,6 +194,7 @@ img {
   background-color: red;
   border-radius: 4px;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 .btn-top-cont a {
   text-decoration: none;
@@ -215,4 +217,57 @@ img {
   background-color: yellow;
   height: 100px;
   width: 100px;
+}
+
+.freeze-btn {
+  display: block;
+  height: 50px;
+  width: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.freeze-container {
+  position: relative;
+}
+#freeze-box {
+  background-color: #555;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 10rem;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+#submit-go {
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+}
+
+.drop-area {
+  height: 300px;
+  width: 400px;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+#drag-drop {
+  opacity: 0;
+}
+.highlight {
+  background-color: green;
+}
+
+#dp-text {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+#dp-message {
+  margin-top: 2rem;
 }

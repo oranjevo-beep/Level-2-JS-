@@ -155,30 +155,32 @@ cookStor.addEventListener("input", () => {
 });
 cookStor.innerHTML = document.cookie;
 
-// button go up
-
 // scroll function
 const btnTop = document.querySelector("#btn-top");
 
 const scrollFunc = () => {
-  return document.body.scrollTop > 20 || document.documentElement.scrollTop > 20
+  console.log(document.documentElement.scrollTop);
+  return document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
     ? btnTop.classList.remove("hidden")
     : btnTop.classList.add("hidden");
 };
 const goTop = () => {
   document.body.scrollTo({
-    top: 100,
+    top: 20,
     left: 0,
     behavior: "smooth",
   });
   document.documentElement.scrollTo({
-    top: 100,
+    top: 20,
     left: 0,
     behavior: "smooth",
   });
 };
+
 document.addEventListener("scroll", scrollFunc);
-const condition = true;
+btnTop.addEventListener("click", goTop);
+
 const block1 = document.querySelector(".block-1");
 const block2 = document.querySelector(".block-2");
 block1.addEventListener("click", hi);
@@ -194,3 +196,60 @@ block1.addEventListener("click", hi);
 function hi() {
   alert("hello");
 }
+
+const freezeBtn = document.querySelector(".freeze-btn");
+const freezeBox = document.querySelector("#freeze-box");
+const freezeCont = document.querySelector(".freeze-container");
+
+function freeze() {
+  freezeBox.classList.remove("hidden");
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  document.body.style.overflow = "hidden";
+}
+freezeBtn.addEventListener("click", freeze);
+freezeBox.addEventListener("click", () => {
+  freezeBox.classList.add("hidden");
+  document.body.style.backgroundColor = "white";
+  document.body.style.overflow = "visible";
+});
+
+// 17
+const submit = document.querySelector("#submit-go");
+submit.addEventListener("click", (e) => {
+  e.preventDefault();
+});
+
+// 18
+const dropArea = document.querySelector(".drop-area");
+const dgDpBtpn = document.querySelector("#drap-drop-btn");
+const dgDpInput = document.querySelector("#drag-drop");
+const dpText = document.querySelector("#dp-text");
+const dpMessage = document.querySelector("#dp-message");
+let file;
+dgDpBtpn.onclick = () => {
+  input.click();
+};
+
+// dgDpInput.addEventListener("change", function () {
+//   file = this.files[0];
+// });
+
+function preventDefaults(e) {
+  e.preventDefault();
+  e.stopPropagation();
+}
+
+dropArea.addEventListener("dragover", (e) => {
+  dpText.textContent = "Release to Upload File";
+  dropArea.classList.add("highlight");
+  preventDefaults(e);
+});
+
+dropArea.addEventListener("drop", (e) => {
+  dropArea.classList.remove("highlight");
+  dpText.textContent = "Drag & Drop to Upload file";
+  file = e.dataTransfer.files[0];
+  preventDefaults(e);
+  console.log(file);
+  dpMessage.innerHTML = `Your file uploaded: "${file.name}"`;
+});

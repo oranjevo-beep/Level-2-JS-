@@ -5,11 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/fontawesome-free-5.15.3-web/css/all.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="section">
+    <section  class="section">
       <h2>Exercise 1 & 2</h2>
       <div class="container">
         <div id="black"></div>
@@ -108,15 +107,33 @@
       <h3>Cookies</h3>
       <div id="cookies" contenteditable="true" class="block"></div>
     </div>
-    <div class="hidden btn-top-cont" id="btn-top">
-      <div class="icon-cont"></div>
-      <a href="#"><i class="fas fa-arrow-alt-circle-up"> </i></a>
-      <span>top</span>
-    </div>
+    
     <div class="section">
       <div class="block-1">
         <div class="block-2"></div>
       </div>
+    </div>
+    <div class="section freeze-container">
+      <button class="freeze-btn">freeze</button>
+      <div class="hidden" id="freeze-box"></div>
+    </div>
+    <section class="section">
+      <form><input id="submit-go" type="submit" value="GO" /></form>
+      <div class="drop-area">
+        <form>
+          <h3 id="dp-text">Drag & Drop to Upload file</h3>
+          <input type="file" id="drag-drop" />
+          <label id="drap-drop-btn" class="btn" for="drag-drop"
+            >select files</label
+          >
+          <p id="dp-message"></p>
+        </form>
+      </div>
+    </section>
+    <div class="hidden btn-top-cont" id="btn-top">
+      <div class="icon-cont"></div>
+      <a href="#">⇧</i></a>
+      <span>top</span>
     </div>
     <script src="script.js"></script>
   </body>
