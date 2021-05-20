@@ -85,7 +85,7 @@ h2 {
   max-width: 20rem;
 }
 #inp-3 {
-  max-width: 20rem;
+  max-width: 15rem;
 }
 .input-container {
   margin-top: 2rem;
@@ -177,7 +177,15 @@ img {
 }
 @media screen and (max-width: 580px) {
   .block {
-    width: 200px;
+    width: 12.5rem;
+  }
+  .drop-area {
+    max-width: 15rem;
+  }
+  #dp-message,
+  #dp-text {
+    text-align: center;
+    max-width: 11.25rem;
   }
 }
 
@@ -249,7 +257,7 @@ img {
 .drop-area {
   text-align: center;
   height: 300px;
-
+  width: 400px;
   background-color: bisque;
   display: flex;
   flex-direction: column;
@@ -263,9 +271,7 @@ img {
 .highlight {
   background-color: green;
 }
-#drag-drop-btn {
-  margin-right: 1rem;
-}
+
 #dp-text {
   margin-bottom: 4rem;
   text-align: center;
