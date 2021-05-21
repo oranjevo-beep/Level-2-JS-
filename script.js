@@ -165,21 +165,16 @@ const scrollFunc = () => {
     ? btnTop.classList.remove("hidden")
     : btnTop.classList.add("hidden");
 };
-const goTop = () => {
-  document.body.scrollTo({
-    top: 20,
-    left: 0,
-    behavior: "smooth",
-  });
-  document.documentElement.scrollTo({
-    top: 20,
-    left: 0,
-    behavior: "smooth",
-  });
-};
 
 document.addEventListener("scroll", scrollFunc);
-btnTop.addEventListener("click", goTop);
+btnTop.addEventListener("click", () => {
+  // window.scrollTo({
+  //   left: black.left + window.pageXOffset,
+  //   top: black.top + window.pageYOffset,
+  //   behavior: "smooth",
+  // });
+  black.scrollIntoView({ behavior: "smooth" });
+});
 
 const block1 = document.querySelector(".block-1");
 const block2 = document.querySelector(".block-2");
